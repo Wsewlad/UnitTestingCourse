@@ -13,9 +13,9 @@ class SignupFormModelValidator: SignupModelValidatorProtocol {
 
 //MARK: - First Name
 extension SignupFormModelValidator {
-    func isFirstNameValid(firstName: String) -> Bool {
+    func isFirstNameValid(_ value: String) -> Bool {
         var returnValue = true
-        if firstName.count < SignupConstants.firstNameMinLength || firstName.count > SignupConstants.firstNameMaxLength {
+        if value.count < SignupConstants.firstNameMinLength || value.count > SignupConstants.firstNameMaxLength {
             returnValue = false
         }
         return returnValue
@@ -24,9 +24,9 @@ extension SignupFormModelValidator {
 
 //MARK: - Last Name
 extension SignupFormModelValidator {
-    func isLastNameValid(lastName: String) -> Bool {
+    func isLastNameValid(_ value: String) -> Bool {
         var returnValue = true
-        if lastName.count < SignupConstants.lastNameMinLength || lastName.count > SignupConstants.lastNameMaxLength {
+        if value.count < SignupConstants.lastNameMinLength || value.count > SignupConstants.lastNameMaxLength {
             returnValue = false
         }
         return returnValue

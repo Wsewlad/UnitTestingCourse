@@ -8,6 +8,6 @@
 import Foundation
 
 protocol SignupModelValidatorProtocol {
-    func isFirstNameValid(firstName: String) -> Bool
-    func isLastNameValid(lastName: String) -> Bool
+    func isFirstNameValid(_ value: String) -> Bool
+    func isLastNameValid(_ value: String) -> Bool
 }

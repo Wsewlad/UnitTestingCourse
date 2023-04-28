@@ -28,7 +28,7 @@ extension SignupFormModelValidatorTests {
     func testSignFormModelValidator_WhenValidFirstNameProvided_ShouldReturnTrue() {
         // Arrange
         // Act
-        let isFirstNameValid = sut.isFirstNameValid(firstName: "Vladyslav")
+        let isFirstNameValid = sut.isFirstNameValid("Vladyslav")
         // Assert
         XCTAssertTrue(isFirstNameValid, "The isFirstNameValid() should have returned TRUE for a valid first name but returned FALSE")
     }
@@ -36,7 +36,7 @@ extension SignupFormModelValidatorTests {
     func testSignupFormModelValidator_WhenTooShortFirstNameProvided_ShouldReturnFalse() {
         // Arrange
         // Act
-        let isFirstNameValid = sut.isFirstNameValid(firstName: "V")
+        let isFirstNameValid = sut.isFirstNameValid("V")
         // Assert
         XCTAssertFalse(isFirstNameValid, "The isFirstNameValid() should have returned FALSE for a first name that is shorter than \(SignupConstants.firstNameMinLength) characters but it has returned TRUE")
     }
@@ -44,7 +44,7 @@ extension SignupFormModelValidatorTests {
     func testSignupFormModelValidator_WhenTooLongFirstNameProvided_ShouldReturnFalse() {
         // Arrange
         // Act
-        let isFirstNameValid = sut.isFirstNameValid(firstName: "VladyslavVladyslav")
+        let isFirstNameValid = sut.isFirstNameValid("VladyslavVladyslav")
         // Assert
         XCTAssertFalse(isFirstNameValid, "The isFirstNameValid() should have returned FALSE for a first name that is longer than \(SignupConstants.firstNameMaxLength) characters but it has returned TRUE")
     }
@@ -55,7 +55,7 @@ extension SignupFormModelValidatorTests {
     func testSignFormModelValidator_WhenValidLastNameProvided_ShouldReturnTrue() {
         // Arrange
         // Act
-        let isLastNameValid = sut.isLastNameValid(lastName: "Fil")
+        let isLastNameValid = sut.isLastNameValid("Fil")
         // Assert
         XCTAssertTrue(isLastNameValid, "The isLastNameValid() should have returned TRUE for a valid last name but returned FALSE")
     }
