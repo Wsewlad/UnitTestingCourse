@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SignupFormModelValidator {
+class SignupFormModelValidator: SignupModelValidatorProtocol {
     
 }
 

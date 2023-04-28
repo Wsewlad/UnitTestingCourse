@@ -15,6 +15,7 @@
 		829C5BC829FC4B2500915A16 /* SignupConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829C5BC729FC4B2500915A16 /* SignupConstants.swift */; };
 		829C5BCA29FC4B7500915A16 /* SignupFormModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829C5BC929FC4B7500915A16 /* SignupFormModelValidator.swift */; };
 		829C5BCD29FC4BFB00915A16 /* SignupFormModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829C5BCC29FC4BFB00915A16 /* SignupFormModelValidatorTests.swift */; };
+		829C5BD029FC524E00915A16 /* SignupModelValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829C5BCF29FC524E00915A16 /* SignupModelValidatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		829C5BC729FC4B2500915A16 /* SignupConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupConstants.swift; sourceTree = "<group>"; };
 		829C5BC929FC4B7500915A16 /* SignupFormModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidator.swift; sourceTree = "<group>"; };
 		829C5BCC29FC4BFB00915A16 /* SignupFormModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModelValidatorTests.swift; sourceTree = "<group>"; };
+		829C5BCF29FC524E00915A16 /* SignupModelValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModelValidatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		829C5BAA29FC4A9100915A16 /* PhotoApp */ = {
 			isa = PBXGroup;
 			children = (
+				829C5BCE29FC523E00915A16 /* Protocols */,
 				829C5BC629FC4B1600915A16 /* Models */,
 				829C5BAB29FC4A9100915A16 /* PhotoAppApp.swift */,
 				829C5BAD29FC4A9100915A16 /* ContentView.swift */,
@@ -120,6 +123,14 @@
 				829C5BCC29FC4BFB00915A16 /* SignupFormModelValidatorTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		829C5BCE29FC523E00915A16 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				829C5BCF29FC524E00915A16 /* SignupModelValidatorProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 				829C5BAE29FC4A9100915A16 /* ContentView.swift in Sources */,
 				829C5BCA29FC4B7500915A16 /* SignupFormModelValidator.swift in Sources */,
 				829C5BAC29FC4A9100915A16 /* PhotoAppApp.swift in Sources */,
+				829C5BD029FC524E00915A16 /* SignupModelValidatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
