@@ -59,4 +59,20 @@ extension SignupFormModelValidatorTests {
         // Assert
         XCTAssertTrue(isLastNameValid, "The isLastNameValid() should have returned TRUE for a valid last name but returned FALSE")
     }
+    
+    func testSignupFormModelValidator_WhenTooShortLastNameProvided_ShouldReturnFalse() {
+        // Arrange
+        // Act
+        let isLastNameValid = sut.isLastNameValid("F")
+        // Assert
+        XCTAssertFalse(isLastNameValid, "The isLastNameValid() should have returned FALSE for a last name that is shorter than \(SignupConstants.lastNameMinLength) characters but it has returned TRUE")
+    }
+    
+    func testSignupFormModelValidator_WhenTooLongLastNameProvided_ShouldReturnFalse() {
+        // Arrange
+        // Act
+        let isLastNameValid = sut.isLastNameValid("FilFilFilFilFilFilFilFilFil")
+        // Assert
+        XCTAssertFalse(isLastNameValid, "The isLastNameValid() should have returned FALSE for a last name that is longer than \(SignupConstants.lastNameMaxLength) characters but it has returned TRUE")
+    }
 }
