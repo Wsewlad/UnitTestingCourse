@@ -32,3 +32,12 @@ extension SignupFormModelValidator {
         return returnValue
     }
 }
+
+//MARK: - Email
+extension SignupFormModelValidator {
+    func isEmailValid(_ value: String) -> Bool {
+        let emailRegex = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: value)
+    }
+}

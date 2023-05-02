@@ -76,3 +76,30 @@ extension SignupFormModelValidatorTests {
         XCTAssertFalse(isLastNameValid, "The isLastNameValid() should have returned FALSE for a last name that is longer than \(SignupConstants.lastNameMaxLength) characters but it has returned TRUE")
     }
 }
+
+// MARK: Email Validation
+extension SignupFormModelValidatorTests {
+    func testSignFormModelValidator_WhenValidEmailProvided_ShouldReturnTrue() {
+        // Arrange
+        // Act
+        let isEmailValid = sut.isEmailValid("test@gmail.com")
+        // Assert
+        XCTAssertTrue(isEmailValid, "The isEmailValid() should have returned TRUE for a valid email but returned FALSE")
+    }
+    
+    func testSignupFormModelValidator_WhenEmailWithoutValidEndingProvided_ShouldReturnFalse() {
+        // Arrange
+        // Act
+        let isEmailValid = sut.isEmailValid("test@gmail.")
+        // Assert
+        XCTAssertFalse(isEmailValid, "The isEmailValid() should have returned FALSE for an email that has an invalid ending but it has returned TRUE")
+    }
+
+    func testSignupFormModelValidator_WhenEmailWithoutAtSignProvided_ShouldReturnFalse() {
+        // Arrange
+        // Act
+        let isEmailValid = sut.isEmailValid("testAtgmail.com")
+        // Assert
+        XCTAssertFalse(isEmailValid, "The isEmailValid() should have returned FALSE for an email that doesn't include At sign but it has returned TRUE")
+    }
+}
