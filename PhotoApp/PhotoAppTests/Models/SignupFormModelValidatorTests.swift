@@ -103,3 +103,30 @@ extension SignupFormModelValidatorTests {
         XCTAssertFalse(isEmailValid, "The isEmailValid() should have returned FALSE for an email that doesn't include At sign but it has returned TRUE")
     }
 }
+
+// MARK: Password Validation
+extension SignupFormModelValidatorTests {
+    func testSignFormModelValidator_WhenValidPasswordProvided_ShouldReturnTrue() {
+        // Arrange
+        // Act
+        let isPasswordValid = sut.isPasswordValid("12345678")
+        // Assert
+        XCTAssertTrue(isPasswordValid, "The isPasswordValid() should have returned TRUE for a valid password but returned FALSE")
+    }
+    
+    func testSignupFormModelValidator_WhenTooShortPasswordProvided_ShouldReturnFalse() {
+        // Arrange
+        // Act
+        let isPasswordValid = sut.isPasswordValid("123")
+        // Assert
+        XCTAssertFalse(isPasswordValid, "The isPasswordValid() should have returned FALSE for a password that is shorter than \(SignupConstants.passwordMinLength) characters but it has returned TRUE")
+    }
+    
+    func testSignupFormModelValidator_WhenTooLongPasswordProvided_ShouldReturnFalse() {
+        // Arrange
+        // Act
+        let isPasswordValid = sut.isPasswordValid("123456781234567812345678")
+        // Assert
+        XCTAssertFalse(isPasswordValid, "The isPasswordValid() should have returned FALSE for a password that is longer than \(SignupConstants.passwordMaxLength) characters but it has returned TRUE")
+    }
+}
