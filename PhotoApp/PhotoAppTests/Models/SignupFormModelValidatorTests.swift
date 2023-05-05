@@ -130,3 +130,22 @@ extension SignupFormModelValidatorTests {
         XCTAssertFalse(isPasswordValid, "The isPasswordValid() should have returned FALSE for a password that is longer than \(SignupConstants.passwordMaxLength) characters but it has returned TRUE")
     }
 }
+
+// MARK: Equal Passwords Validation
+extension SignupFormModelValidatorTests {
+    func testSignFormModelValidator_WhenEqualPasswordsProvided_ShouldReturnTrue() {
+        // Arrange
+        // Act
+        let doPasswordsMatch = sut.doPasswordsMatch("12345678", "12345678")
+        // Assert
+        XCTAssertTrue(doPasswordsMatch, "The doPasswordsMatch() should have returned TRUE if both passwords matched but returned FALSE")
+    }
+    
+    func testSignFormModelValidator_WhenDifferentPasswordsProvided_ShouldReturnFalse() {
+        // Arrange
+        // Act
+        let doPasswordsMatch = sut.doPasswordsMatch("12345678", "1234")
+        // Assert
+        XCTAssertFalse(doPasswordsMatch, "The doPasswordsMatch() should have returned FALSE if passwords are different but returned TRUE")
+    }
+}

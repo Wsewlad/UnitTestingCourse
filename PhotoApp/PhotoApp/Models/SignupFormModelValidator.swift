@@ -49,3 +49,10 @@ extension SignupFormModelValidator {
         return true
     }
 }
+
+//MARK: - Passwords Match
+extension SignupFormModelValidator {
+    func doPasswordsMatch(_ value1: String, _ value2: String) -> Bool {
+        value1 == value2
+    }
+}

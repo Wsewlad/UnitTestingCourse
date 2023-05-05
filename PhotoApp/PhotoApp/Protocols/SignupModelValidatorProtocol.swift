@@ -12,4 +12,5 @@ protocol SignupModelValidatorProtocol {
     func isLastNameValid(_ value: String) -> Bool
     func isEmailValid(_ value: String) -> Bool
     func isPasswordValid(_ value: String) -> Bool
+    func doPasswordsMatch(_ value1: String, _ value2: String) -> Bool
 }
