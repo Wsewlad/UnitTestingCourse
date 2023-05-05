@@ -22,7 +22,7 @@ final class SignupWebServiceTests: XCTestCase {
 extension SignupWebServiceTests {
     func testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess() {
         // Arrange
-        let sut = SignupWebService(urlString: "https://bit.ly/signup-mock-service-users")
+        let sut = SignupWebService(urlString: "https://tlyqhtlbn8.execute-api.us-east-1.amazonaws.com/prod/signup-mock-service/users")
         
         let signupFormRequestModel = SignupFormRequestModel(
             firstName: "Vladyslav",
@@ -31,6 +31,7 @@ extension SignupWebServiceTests {
             password: "12345678"
         )
         let expectation = self.expectation(description: "Signup Web  Service Response Expactation")
+        
         // Act
         sut.signup(withForm: signupFormRequestModel) { (signupResponseModel, error) in
             
