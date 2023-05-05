@@ -12,7 +12,7 @@ final class SignupWebServiceTests: XCTestCase {
     var sut: SignupWebService!
     var signupFormRequestModel: SignupFormRequestModel!
     
-    override func setUpWithError() throws {
+    override func setUp() {
         let config = URLSessionConfiguration.ephemeral
         config.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession(configuration: config)
@@ -29,10 +29,11 @@ final class SignupWebServiceTests: XCTestCase {
         )
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         sut = nil
         signupFormRequestModel = nil
         MockURLProtocol.stubResponseData = nil
+        MockURLProtocol.stubError = nil
     }
 }
 
@@ -87,5 +88,24 @@ extension SignupWebServiceTests {
             expectation.fulfill()
         }
         self.wait(for: [expectation], timeout: 2)
+    }
+}
+
+//MARK: - URLRequest Fails
+extension SignupWebServiceTests {
+    func testSignupWebService_WhenURLRequestFails_ReturnsErrorMassageDescription() {
+        // Arrange
+        let expectation = self.expectation(description: "A failed request expactation")
+        let errorDescription = "A localized description of an error"
+        let expectedError = SignupError.failedRequest(description: errorDescription)
+        MockURLProtocol.stubError = expectedError
+
+        // Act
+        sut.signup(withForm: signupFormRequestModel) { (signupResponseModel, error) in
+            // Assert
+            XCTAssertEqual(error, expectedError, "The singnup() method did not return expected error")
+            expectation.fulfill()
+        }
+        self.wait(for: [expectation], timeout: 5)
     }
 }
