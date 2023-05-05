@@ -14,8 +14,8 @@
             filePath = "PhotoAppTests/SignUp/Network/SignupWebServiceTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess()"
             landmarkType = "7">
             <Locations>
@@ -98,22 +98,6 @@
             endingLineNumber = "22"
             landmarkName = "startLoading()"
             landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4433B39B-A564-4E7A-9FEF-C36D206E3C44"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoAppTests/SignUp/Network/SignupWebServiceTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
