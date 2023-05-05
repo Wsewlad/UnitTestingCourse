@@ -14,8 +14,8 @@
             filePath = "PhotoAppTests/SignUp/Network/SignupWebServiceTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess()"
             landmarkType = "7">
             <Locations>

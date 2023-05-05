@@ -32,6 +32,7 @@ final class SignupWebServiceTests: XCTestCase {
     override func tearDownWithError() throws {
         sut = nil
         signupFormRequestModel = nil
+        MockURLProtocol.stubResponseData = nil
     }
 }
 
