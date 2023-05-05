@@ -8,23 +8,55 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F04E7599-A0EB-4C20-AE18-447EA2882785"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoAppTests/SignUp/Network/SignupWebServiceTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F04E7599-A0EB-4C20-AE18-447EA2882785 - 9b0038aa2d9c258a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;PhotoApp.SignupResponseModel&gt;, Swift.Optional&lt;PhotoApp.SignupErrors&gt;) -&gt; () in PhotoAppTests.SignupWebServiceTests.testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess() -&gt; ()"
+                  moduleName = "PhotoAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladyslavfil/iOS_Developer/UnitTestingCourse/PhotoApp/PhotoAppTests/SignUp/Network/SignupWebServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "F04E7599-A0EB-4C20-AE18-447EA2882785 - 9b0038aa2d9c3adc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;PhotoApp.SignupResponseModel&gt;, Swift.Optional&lt;PhotoApp.SignupErrors&gt;) -&gt; () in PhotoAppTests.SignupWebServiceTests.testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess() -&gt; ()"
+                  moduleName = "PhotoAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vladyslavfil/iOS_Developer/UnitTestingCourse/PhotoApp/PhotoAppTests/SignUp/Network/SignupWebServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "155">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "507B5B09-6D44-41E2-825D-4AA7AB86FF81"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Network/SignupWebService.swift"
@@ -40,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "96307E64-F755-465F-92F7-F8B4466B9EC3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Network/SignupWebService.swift"
@@ -49,6 +81,38 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "signup(withForm:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "497C75D1-7847-440B-A4C4-28CF7883EF5B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoAppTests/SignUp/MockURLProtocol.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "startLoading()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4433B39B-A564-4E7A-9FEF-C36D206E3C44"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoAppTests/SignUp/Network/SignupWebServiceTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "testSignupWebService_WhenGivenSuccessfullResponse_ReturnsSuccess()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
