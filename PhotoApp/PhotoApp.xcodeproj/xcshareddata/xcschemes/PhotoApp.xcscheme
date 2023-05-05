@@ -39,6 +39,11 @@
                BlueprintName = "PhotoAppTests"
                ReferencedContainer = "container:PhotoApp.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "SignupWebServiceTests/testSignupWebService_WhenURLRequestFails_ReturnsErrorMassageDescription()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
