@@ -66,7 +66,7 @@ extension SignupWebServiceTests {
         sut.signup(withForm: signupFormRequestModel) { (signupResponseModel, error) in
             // Assert
             XCTAssertNil(signupResponseModel, "The response model for a request contaning unknown JSON response, should have been nil")
-            XCTAssertEqual(error, SignupError.responseModelParsingError, "The singnup() method did not return expected error")
+            XCTAssertEqual(error, SignupError.responseModelParsing, "The singnup() method did not return expected error")
             expectation.fulfill()
         }
         self.wait(for: [expectation], timeout: 5)
@@ -82,7 +82,7 @@ extension SignupWebServiceTests {
         // Act
         sut.signup(withForm: signupFormRequestModel) { (signupResponseModel, error) in
             // Assert
-            XCTAssertEqual(error, SignupError.invalidUrlError, "The singnup() method did not return expected error")
+            XCTAssertEqual(error, SignupError.invalidUrl, "The singnup() method did not return expected error")
             XCTAssertNil(signupResponseModel, "The response model for a request contaning empty URL string, response should have been nil")
             expectation.fulfill()
         }

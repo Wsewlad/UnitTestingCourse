@@ -21,7 +21,7 @@ class SignupWebService {
         completionHandler: @escaping (SignupResponseModel?, SignupError?) -> Void
     ) {
         guard let url = URL(string: urlString) else {
-            completionHandler(nil, SignupError.invalidUrlError)
+            completionHandler(nil, SignupError.invalidUrl)
             return
         }
         
@@ -38,7 +38,7 @@ class SignupWebService {
                let signupResponseModel = try? JSONDecoder().decode(SignupResponseModel.self, from: data) {
                 completionHandler(signupResponseModel, nil)
             } else {
-                completionHandler(nil, SignupError.responseModelParsingError)
+                completionHandler(nil, SignupError.responseModelParsing)
             }
         }
         
