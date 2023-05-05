@@ -12,6 +12,7 @@
 		82997B752A051B8400DAE9F5 /* SignupFormRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82997B742A051B8400DAE9F5 /* SignupFormRequestModel.swift */; };
 		82997B772A051D7D00DAE9F5 /* SignupResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82997B762A051D7D00DAE9F5 /* SignupResponseModel.swift */; };
 		82997B792A051DA000DAE9F5 /* SignupErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82997B782A051DA000DAE9F5 /* SignupErrors.swift */; };
+		82997B812A05306C00DAE9F5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82997B802A05306C00DAE9F5 /* MockURLProtocol.swift */; };
 		829C5BAC29FC4A9100915A16 /* PhotoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829C5BAB29FC4A9100915A16 /* PhotoAppApp.swift */; };
 		829C5BAE29FC4A9100915A16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829C5BAD29FC4A9100915A16 /* ContentView.swift */; };
 		829C5BB029FC4A9700915A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829C5BAF29FC4A9700915A16 /* Assets.xcassets */; };
@@ -38,6 +39,8 @@
 		82997B742A051B8400DAE9F5 /* SignupFormRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormRequestModel.swift; sourceTree = "<group>"; };
 		82997B762A051D7D00DAE9F5 /* SignupResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseModel.swift; sourceTree = "<group>"; };
 		82997B782A051DA000DAE9F5 /* SignupErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupErrors.swift; sourceTree = "<group>"; };
+		82997B7F2A052F5900DAE9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		82997B802A05306C00DAE9F5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		829C5BA829FC4A9100915A16 /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829C5BAB29FC4A9100915A16 /* PhotoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppApp.swift; sourceTree = "<group>"; };
 		829C5BAD29FC4A9100915A16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 			children = (
 				82997B7E2A051F3D00DAE9F5 /* Network */,
 				829C5BCB29FC4BE000915A16 /* Models */,
+				82997B802A05306C00DAE9F5 /* MockURLProtocol.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -152,6 +156,7 @@
 		829C5BBE29FC4AD200915A16 /* PhotoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				82997B7F2A052F5900DAE9F5 /* Info.plist */,
 				82997B7D2A051F3100DAE9F5 /* SignUp */,
 			);
 			path = PhotoAppTests;
@@ -301,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82997B812A05306C00DAE9F5 /* MockURLProtocol.swift in Sources */,
 				82997B712A051A3300DAE9F5 /* SignupWebServiceTests.swift in Sources */,
 				829C5BCD29FC4BFB00915A16 /* SignupFormModelValidatorTests.swift in Sources */,
 			);
@@ -494,6 +500,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoAppTests/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ua.vfil.PhotoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +519,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoAppTests/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ua.vfil.PhotoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
