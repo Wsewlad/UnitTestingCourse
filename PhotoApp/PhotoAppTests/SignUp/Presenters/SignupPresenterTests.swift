@@ -9,20 +9,14 @@ import XCTest
 @testable import PhotoApp
 
 final class SignupPresenterTests: XCTestCase {
-
+    
+    var signupFormModel: SignupFormModel!
+    var mockSignupModelValidator: MockSignupModelValidator!
+    var mockSignupWebService: MockSignupWebService!
+    var sut: SignupPresenter!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-}
-
-extension SignupPresenterTests {
-    func testSignupPresenter_WhenInformationProvided_WillValidateEachProperty() {
-        // Arrange
-        let signupFormModel = SignupFormModel(
+        signupFormModel = SignupFormModel(
             firstName: "Vladyslav",
             lastName: "Fil",
             email: "test@gmail.com",
@@ -30,9 +24,26 @@ extension SignupPresenterTests {
             repeatPassword: "12345678"
         )
         
-        let mockSignupModelValidator = MockSignupModelValidator()
-        let sut = SignupPresenter(formModelValidator: mockSignupModelValidator)
+        mockSignupModelValidator = MockSignupModelValidator()
+        mockSignupWebService = MockSignupWebService()
         
+        sut = SignupPresenter(
+            formModelValidator: mockSignupModelValidator,
+            webService: mockSignupWebService
+        )
+    }
+
+    override func tearDownWithError() throws {
+        signupFormModel = nil
+        mockSignupModelValidator = nil
+        mockSignupWebService = nil
+        sut = nil
+    }
+}
+
+extension SignupPresenterTests {
+    func testSignupPresenter_WhenInformationProvided_WillValidateEachProperty() {
+        // Arrange
         // Act
         sut.processUserSignup(formModel: signupFormModel)
         
@@ -42,5 +53,16 @@ extension SignupPresenterTests {
         XCTAssertTrue(mockSignupModelValidator.isEmailValidated, "Email was not validated")
         XCTAssertTrue(mockSignupModelValidator.isPasswordValidated, "Password was not validated")
         XCTAssertTrue(mockSignupModelValidator.arePasswordMatch, "Passwords match was not validated")
+    }
+}
+
+extension SignupPresenterTests {
+    func testSignupPresenter_WhenGivenValidFormModel_ShouldCallSignupMethod() {
+        // Arrange
+        // Act
+        sut.processUserSignup(formModel: signupFormModel)
+        
+        //Assert
+        XCTAssertTrue(mockSignupWebService.isSignupMethodCalled, "The signup() method was not called in thr SignupWebService class")
     }
 }
