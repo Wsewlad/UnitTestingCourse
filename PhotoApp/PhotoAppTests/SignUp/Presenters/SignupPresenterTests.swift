@@ -82,5 +82,24 @@ extension SignupPresenterTests {
         self.wait(for: [myExpectation], timeout: 5)
         
         //Assert
+        XCTAssertEqual(mockSignupViewDelegate.successfulSignupCouner, 1, "The successfulSignup() method was called more than one time")
+    }
+}
+
+extension SignupPresenterTests {
+    func testSignupPresenter_WhenSignupOperationFailed_CallsErrorHandlerOnViewDelegate() {
+        // Arrange
+        let myExpectation = expectation(description: "Expected the errorHandler() method to be called")
+        mockSignupViewDelegate.expectation = myExpectation
+        mockSignupWebService.shouldReturnError = true
+        
+        // Act
+        sut.processUserSignup(formModel: signupFormModel)
+        self.wait(for: [myExpectation], timeout: 5)
+        
+        //Assert
+        XCTAssertEqual(mockSignupViewDelegate.successfulSignupCouner, 0, "The successfulSignup() method was called")
+        XCTAssertEqual(mockSignupViewDelegate.errorSignupCouner, 1, "The errorHandler() method wasn't called one time")
+        XCTAssertEqual(mockSignupViewDelegate.signupError, .signupFailed)
     }
 }

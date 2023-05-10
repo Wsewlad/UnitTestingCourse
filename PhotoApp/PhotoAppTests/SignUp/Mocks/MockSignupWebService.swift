@@ -10,9 +10,15 @@ import Foundation
 
 class MockSignupWebService: SignupWebServiceProtocol {
     var isSignupMethodCalled: Bool = false
+    var shouldReturnError: Bool = false
     
-    func signup(withForm formModel: PhotoApp.SignupFormRequestModel, completionHandler: @escaping (PhotoApp.SignupResponseModel?, PhotoApp.SignupError?) -> Void) {
+    func signup(withForm formModel: SignupFormRequestModel, completionHandler: @escaping (SignupResponseModel?, SignupError?) -> Void) {
         isSignupMethodCalled = true
+        
+        if shouldReturnError {
+            completionHandler(nil, .signupFailed)
+            return
+        }
         
         let responseModel = SignupResponseModel(status: "Ok")
         completionHandler(responseModel, nil)

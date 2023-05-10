@@ -52,6 +52,8 @@ class SignupPresenter {
                 self?.delegate?.successfulSignup()
                 return
             }
+            
+            self?.delegate?.errorHandler(error: .signupFailed)
         }
     }
 }

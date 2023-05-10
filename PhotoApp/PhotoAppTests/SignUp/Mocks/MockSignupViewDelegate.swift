@@ -11,12 +11,18 @@ import XCTest
 
 class MockSignupViewDelegate: SignupViewDelegateProtocol {
     var expectation: XCTestExpectation?
+    var successfulSignupCouner = 0
+    var errorSignupCouner = 0
+    var signupError: SignupError?
     
     func successfulSignup() {
+        successfulSignupCouner += 1
         expectation?.fulfill()
     }
     
-    func errorHandler(error: PhotoApp.SignupError) {
-        
+    func errorHandler(error: SignupError) {
+        errorSignupCouner += 1
+        signupError = error
+        expectation?.fulfill()
     }
 }
