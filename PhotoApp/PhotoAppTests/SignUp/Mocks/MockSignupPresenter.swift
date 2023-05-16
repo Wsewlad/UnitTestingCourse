@@ -9,14 +9,15 @@ import Foundation
 @testable import PhotoApp
 
 class MockSignupPresenter: SignupPresenterProtocol {
+    var delegate: PhotoApp.SignupViewDelegateProtocol?
     var processUserSignupCalled = false
     
     required init(
-        formModelValidator: SignupModelValidatorProtocol,
-        webService: SignupWebServiceProtocol,
-        delegate: SignupViewDelegateProtocol
+        formModelValidator: PhotoApp.SignupModelValidatorProtocol,
+        webService: PhotoApp.SignupWebServiceProtocol,
+        delegate: PhotoApp.SignupViewDelegateProtocol?
     ) {
-        // TODO:
+        // TODO
     }
     
     func processUserSignup(formModel: SignupFormModel) {
