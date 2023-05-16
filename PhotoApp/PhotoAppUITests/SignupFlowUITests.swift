@@ -8,10 +8,27 @@
 import XCTest
 
 final class SignupFlowUITests: XCTestCase {
+    private var app: XCUIApplication!
+    private var firstName: XCUIElement!
+    private var lastName: XCUIElement!
+    private var email: XCUIElement!
+    private var password: XCUIElement!
+    private var repeatPassword: XCUIElement!
+    private var signupButton: XCUIElement!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
         
+        app = XCUIApplication()
+        app.launch()
+        
+        firstName = app.textFields["firstNameTextField"]
+        lastName = app.textFields["lastNameTextField"]
+        email = app.textFields["emailTextField"]
+        password = app.secureTextFields["passwordSecureField"]
+        repeatPassword = app.secureTextFields["repeatPasswordSecureField"]
+        signupButton = app.buttons["signupButton"]
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         
@@ -20,25 +37,20 @@ final class SignupFlowUITests: XCTestCase {
     
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app = nil
+        firstName = nil
+        lastName = nil
+        email = nil
+        password = nil
+        repeatPassword = nil
+        signupButton = nil
+        try super.tearDownWithError()
     }
 }
 
 //MARK: - Required UI Elements
 extension SignupFlowUITests {
     func testSignupView_WhenViewAppeared_RequiredUIElementsAreEnabled() throws {
-        // Arrange
-        let app = XCUIApplication()
-        app.launch()
-        
-        let firstName = app.textFields["firstNameTextField"]
-        let lastName = app.textFields["lastNameTextField"]
-        let email = app.textFields["emailTextField"]
-        let password = app.secureTextFields["passwordSecureField"]
-        let repeatPassword = app.secureTextFields["repeatPasswordSecureField"]
-        let signupButton = app.buttons["signupButton"]
-        
-        // Act
-        // Assert
         XCTAssertTrue(firstName.isEnabled, "First name TextFiled is not enabled for user interactions")
         XCTAssertTrue(lastName.isEnabled, "Last name TextFiled is not enabled for user interactions")
         XCTAssertTrue(email.isEnabled, "Email TextFiled is not enabled for user interactions")
@@ -51,17 +63,6 @@ extension SignupFlowUITests {
 //MARK: - Present Error Alert Dialog
 extension SignupFlowUITests {
     func testSignupView_WhenInvalidFormSubmitted_PresentErrorAlertDialog() throws {
-        // Arrange
-        let app = XCUIApplication()
-        app.launch()
-        
-        let firstName = app.textFields["firstNameTextField"]
-        let lastName = app.textFields["lastNameTextField"]
-        let email = app.textFields["emailTextField"]
-        let password = app.secureTextFields["passwordSecureField"]
-        let repeatPassword = app.secureTextFields["repeatPasswordSecureField"]
-        let signupButton = app.buttons["signupButton"]
-        
         // Act
         firstName.tap()
         firstName.typeText("a")

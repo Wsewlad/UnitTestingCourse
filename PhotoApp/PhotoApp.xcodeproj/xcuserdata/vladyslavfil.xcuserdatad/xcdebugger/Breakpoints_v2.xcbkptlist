@@ -349,40 +349,8 @@
             filePath = "PhotoAppUITests/SignupFlowUITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "testSignupView_WhenViewAppeared_RequiredUIElementsAreEnabled()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "18FC9C98-6F23-4761-B01A-FD29DCD4B1A0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoAppUITests/SignupFlowUITests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "testSignupView_WhenViewAppeared_RequiredUIElementsAreEnabled()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "17E1E32C-519B-4869-884D-B9A16DCABBC3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoAppUITests/SignupFlowUITests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "testSignupView_WhenViewAppeared_RequiredUIElementsAreEnabled()"
             landmarkType = "7">
          </BreakpointContent>
@@ -445,8 +413,8 @@
             filePath = "PhotoAppUITests/SignupFlowUITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "testSignupView_WhenInvalidFormSubmitted_PresentErrorAlertDialog()"
             landmarkType = "7">
          </BreakpointContent>
@@ -541,8 +509,8 @@
             filePath = "PhotoAppUITests/SignupFlowUITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "testSignupView_WhenInvalidFormSubmitted_PresentErrorAlertDialog()"
             landmarkType = "7">
          </BreakpointContent>
