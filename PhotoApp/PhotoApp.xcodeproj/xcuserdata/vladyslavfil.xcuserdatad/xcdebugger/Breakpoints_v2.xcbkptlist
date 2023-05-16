@@ -247,7 +247,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "777C9FE8-CC8E-4A90-A4F6-F803B9D195A0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Presenters/SignupPresenter.swift"
@@ -295,7 +295,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "529DC98D-193A-4649-A5F6-172D8F6083AA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Presenters/SignupPresenter.swift"
@@ -358,54 +358,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2C7A65F1-72C1-4E9A-8131-39E60BC8D77B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoApp/SignUp/ViewModels/SignupViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "successfulSignup()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2C7A65F1-72C1-4E9A-8131-39E60BC8D77B - aff29b1fd3e9fdf9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PhotoApp.SignupViewModel.successfulSignup() -&gt; ()"
-                  moduleName = "PhotoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladyslavfil/iOS_Developer/UnitTestingCourse/PhotoApp/PhotoApp/SignUp/ViewModels/SignupViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  uuid = "2C7A65F1-72C1-4E9A-8131-39E60BC8D77B - aff29b1fd3e9fd54"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PhotoApp.SignupViewModel.successfulSignup() -&gt; ()"
-                  moduleName = "PhotoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladyslavfil/iOS_Developer/UnitTestingCourse/PhotoApp/PhotoApp/SignUp/ViewModels/SignupViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "37">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0DFBAA98-9AAC-4643-AA29-4AC990BCC91A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -439,7 +391,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7F764755-30B7-4015-8BFE-B5ED209817D7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Presenters/SignupPresenter.swift"
@@ -455,7 +407,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "72E972E1-E500-4C79-8C5B-7B9BAAA8E297"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Presenters/SignupPresenter.swift"
@@ -471,7 +423,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "20A4C176-4F8B-4B57-92ED-C27032BC3436"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Presenters/SignupPresenter.swift"
@@ -487,7 +439,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "33D13138-D286-41DC-BA78-F8C886C5560A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoApp/SignUp/Presenters/SignupPresenter.swift"

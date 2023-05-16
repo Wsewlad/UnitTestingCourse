@@ -21,6 +21,17 @@ struct SignupView: View {
                 prompt: Text("First name")
             )
             .accessibilityIdentifier("firstNameTextField")
+            .alert(
+                "Error",
+                isPresented: $viewModel.isErrorPresented,
+                presenting: viewModel.error
+            ) { _ in
+                Button("Ok") {
+                    
+                }
+            } message: { error in
+                Text(error.text)
+            }
             
             TextField(
                 "",
@@ -28,6 +39,17 @@ struct SignupView: View {
                 prompt: Text("Last name")
             )
             .accessibilityIdentifier("lastNameTextField")
+            .alert(
+                "Success",
+                isPresented: $viewModel.isSuccessPresented,
+                presenting: viewModel.successMessage
+            ) { _ in
+                Button("Ok") {
+                    
+                }
+            } message: { message in
+                Text(message)
+            }
             
             TextField(
                 "",
@@ -61,17 +83,6 @@ struct SignupView: View {
         }
         .textFieldStyle(.roundedBorder)
         .padding(16)
-        .alert(
-            "Error",
-            isPresented: $viewModel.isErrorPresented,
-            presenting: viewModel.error
-        ) { _ in
-            Button("Ok") {
-                
-            }
-        } message: { error in
-            Text(error.text)
-        }
     }
 }
 

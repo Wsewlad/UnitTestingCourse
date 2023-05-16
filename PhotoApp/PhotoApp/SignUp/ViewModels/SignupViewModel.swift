@@ -20,8 +20,8 @@ class SignupViewModel: ObservableObject {
         webService: SignupWebServiceProtocol
     ) {
         self.presenter = SignupPresenter(
-            formModelValidator: SignupFormModelValidator(),
-            webService: SignupWebService(urlString: ""),
+            formModelValidator: formModelValidator,
+            webService: webService,
             delegate: nil
         )
     }
@@ -34,6 +34,9 @@ class SignupViewModel: ObservableObject {
     
     @Published var error: AlertError? = nil
     @Published var isErrorPresented: Bool = false
+    
+    @Published var successMessage: String? = nil
+    @Published var isSuccessPresented: Bool = false
     
     func signup() {
         self.presenter.delegate = self
@@ -51,8 +54,10 @@ class SignupViewModel: ObservableObject {
 
 extension SignupViewModel: SignupViewDelegateProtocol {
     func successfulSignup() {
-        // TODO
-        print("successfulSignup")
+        DispatchQueue.main.async {
+            self.successMessage = "Your signup request completed"
+            self.isSuccessPresented = true
+        }
     }
     
     func errorHandler(error: SignupError) {

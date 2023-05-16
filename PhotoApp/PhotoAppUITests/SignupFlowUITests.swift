@@ -86,6 +86,32 @@ extension SignupFlowUITests {
     }
 }
 
+//MARK: - Present Success Alert Dialog
+extension SignupFlowUITests {
+    func testSignupView_WhenValidFormSubmitted_PresentSuccessAlertDialog() throws {
+        // Act
+        firstName.tap()
+        firstName.typeText("Vladyslav")
+        
+        lastName.tap()
+        lastName.typeText("Fil")
+        
+        email.tap()
+        email.typeText("test@gmail.com")
+        
+        password.tap()
+        password.clearAndEnterText(text: "123456789")
+        
+        repeatPassword.tap()
+        repeatPassword.clearAndEnterText(text: "123456789")
+        
+        signupButton.tap()
+        
+        // Assert
+        XCTAssertTrue(app.alerts["Success"].waitForExistence(timeout: 3), "An Success alert dialog was not presented when valid signup form was submitted")
+    }
+}
+
 //MARK: - Launch Performance
 extension SignupFlowUITests {
     func testLaunchPerformance() throws {
@@ -94,6 +120,29 @@ extension SignupFlowUITests {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
+        }
+    }
+}
+
+extension XCUIElement {
+    /**
+     Removes any current text in the field before typing in the new value
+     - Parameter text: the text to enter into the field
+     */
+    func clearAndEnterText(text: String) {
+        guard let stringValue = self.value as? String else {
+            XCTFail("Tried to clear and enter text into a non string value")
+            return
+        }
+
+        self.doubleTap()
+
+        let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.count)
+
+        self.typeText(deleteString)
+        
+        text.forEach { character in
+            self.typeText("\(character)")
         }
     }
 }
