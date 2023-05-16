@@ -45,6 +45,17 @@
                </Test>
             </SkippedTests>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "828A10692A13954800BEAC45"
+               BuildableName = "PhotoAppUITests.xctest"
+               BlueprintName = "PhotoAppUITests"
+               ReferencedContainer = "container:PhotoApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

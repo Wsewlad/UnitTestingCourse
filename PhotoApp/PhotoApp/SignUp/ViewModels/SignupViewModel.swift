@@ -34,12 +34,12 @@ class SignupViewModel: ObservableObject {
     }
 }
 
-extension SignupViewModel: SignupViewDelegateProtocol {
-    func successfulSignup() {
-        // TODO
-    }
-    
-    func errorHandler(error: SignupError) {
-        // TODO
-    }
-}
+//extension SignupViewModel: SignupViewDelegateProtocol {
+//    func successfulSignup() {
+//        // TODO
+//    }
+//    
+//    func errorHandler(error: SignupError) {
+//        // TODO
+//    }
+//}
