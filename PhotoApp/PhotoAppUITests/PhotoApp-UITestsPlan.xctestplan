@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "6350D127-1C22-4178-82D6-B526BB264FE4",
+      "name" : "Configuration 1",
+      "options" : {
+        "uiTestingScreenshotsLifetime" : "deleteOnSuccess"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:PhotoApp.xcodeproj",
+      "identifier" : "829C5BA729FC4A9100915A16",
+      "name" : "PhotoApp"
+    },
+    "uiTestingScreenshotsLifetime" : "keepNever"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "SignupWebServiceTests\/testSignupWebService_WhenURLRequestFails_ReturnsErrorMassageDescription()"
+      ],
+      "target" : {
+        "containerPath" : "container:PhotoApp.xcodeproj",
+        "identifier" : "829C5BBC29FC4AD200915A16",
+        "name" : "PhotoAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:PhotoApp.xcodeproj",
+        "identifier" : "828A10692A13954800BEAC45",
+        "name" : "PhotoAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
