@@ -83,6 +83,13 @@ struct SignupView: View {
         }
         .textFieldStyle(.roundedBorder)
         .padding(16)
+        .onAppear {
+            #if DEBUG
+            if CommandLine.arguments.contains("-skipSurvey") {
+                print("Skipping survey page")
+            }
+            #endif
+        }
     }
 }
 

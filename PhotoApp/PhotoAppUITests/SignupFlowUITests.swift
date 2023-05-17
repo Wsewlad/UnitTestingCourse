@@ -21,6 +21,7 @@ final class SignupFlowUITests: XCTestCase {
         try super.setUpWithError()
         
         app = XCUIApplication()
+        app.launchArguments = ["-skipSurvey", "-debugServer"]
         app.launch()
         
         firstName = app.textFields["firstNameTextField"]
