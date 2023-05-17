@@ -81,6 +81,19 @@ extension SignupFlowUITests {
         
         signupButton.tap()
         
+        let emailTextFieldScreenshot = email.screenshot()
+        let emailTextFieldAttachment = XCTAttachment(screenshot: emailTextFieldScreenshot)
+        emailTextFieldAttachment.name = "Screenshot for Email TextField"
+        emailTextFieldAttachment.lifetime = .deleteOnSuccess
+        add(emailTextFieldAttachment)
+        
+//        let currentAppWindow = app.screenshot()
+        let currentAppWindow = XCUIScreen.main.screenshot()
+        let currentAppWindowAttachment = XCTAttachment(screenshot: currentAppWindow)
+        currentAppWindowAttachment.name = "Signup page screenshot"
+        currentAppWindowAttachment.lifetime = .keepAlways
+        add(currentAppWindowAttachment)
+        
         // Assert
         XCTAssertTrue(app.alerts["Error"].waitForExistence(timeout: 1), "An Error alert dialog was not presented when invalid signup form was submitted")
     }
